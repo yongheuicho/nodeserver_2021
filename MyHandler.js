@@ -55,3 +55,4 @@ exports.hello = hello;
 exports.wait = wait;
 exports.randomWait = randomWait;
 exports.firstHtml = firstHtml;
+exports.htmlFile = htmlFile;
