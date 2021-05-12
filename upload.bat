@@ -1,3 +1,3 @@
 git add --all
-git commit -m "add wait page"
+git commit -m "add random wait page"
 git push -u origin master
