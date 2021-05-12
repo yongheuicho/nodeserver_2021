@@ -1,3 +1,3 @@
 git add --all
-git commit -m "add people page reading people.json"
+git commit -m "upgrade people page using Table tag"
 git push -u origin master

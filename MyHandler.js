@@ -13,8 +13,10 @@ function start(res) {
     '<div><a href="/page">Handler 없이 "/page"로 매핑하는 페이지</a></div>';
   body += '<div><a href="/serverInfo">Server 정보를 표시하는 페이지</a></div>';
   body += '<div><a href="/form">Form 입력 페이지</a></div>';
-  body += '<div><a href="/nickname">Form으로 넘어온 이름과 별명 표시 페이지</a></div>';
-  body += '<div><a href="/people">JSON을 입력받아 사람 정보를 표시하는 페이지</a></div>';
+  body +=
+    '<div><a href="/nickname">Form으로 넘어온 이름과 별명 표시 페이지</a></div>';
+  body +=
+    '<div><a href="/people">JSON을 입력받아 사람 정보를 표시하는 페이지</a></div>';
   body += '</body>';
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write(body);
@@ -83,8 +85,14 @@ function people(res) {
   str = fs.readFileSync('people.json', 'utf-8');
   obj = JSON.parse(str);
   console.log(obj.name + ': ' + obj.house);
+  body =
+    '<table><thead><tr><th>name</th><th>house</th></tr></thead><tbody><tr><td>' +
+    obj.name +
+    '</td><td>' +
+    obj.house +
+    '</td></tr></tbody></table>';
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write(str);
+  res.write(body);
   res.end();
 }
 
