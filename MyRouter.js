@@ -8,7 +8,7 @@ function route(pathname, handle, res) {
   } else {
     pathFile = '.' + pathname + '.html'; // ex) ./page.html
     if (fs.existsSync(pathFile)) {
-      console.log(pathFile + 'is found.');
+      console.log(pathFile + ' is found.');
       myHandler.htmlFile(res, pathFile);
     } else {
       console.log('No handler for ' + pathname);
